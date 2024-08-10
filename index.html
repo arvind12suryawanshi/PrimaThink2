@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Containers with Border Touch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .border-box {
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            height: 90vh;
+            border: 2px solid #000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .container-small {
+            flex: 1;
+        }
+
+        .container-large {
+            flex: 2;
+            margin: 30px 0; /* Add margin to create gap between middle container and others */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="border-box">
+        <div class="container container-small">Header </div>
+        <div class="container container-large">container</div>
+        <div class="container container-small">footer</div>
+    </div>
+
+</body>
+</html>
